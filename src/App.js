@@ -1,8 +1,13 @@
 import React from 'react'
+import './App.css'
+import Topbar from './Components/topbar/Topbar'
 
 const App = () => {
   return (
-    <div>App</div>
+   <>
+    <Topbar/>
+    <h1>hi wo</h1>
+   </>
   )
 }
 

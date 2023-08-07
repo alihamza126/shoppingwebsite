@@ -1,0 +1,53 @@
+.topbar{
+    box-sizing: border-box;
+    padding: 0% 4rem;
+    width: 100%;
+    background:linear-gradient(to top,rgba(67, 22, 71, 0.719),rgba(16, 16, 63, 0.719));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    color: white !important;
+}
+svg{
+    height: 1.2rem !important;
+    width: 1.2rem;
+}
+.t-left{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.t-contact{
+    display: flex;
+    gap: 10px;
+}
+.t-contact>:nth-child(1){
+   color: rgb(255, 250, 250);
+}
+.t-contact>:nth-child(2){
+   color: rgb(255, 250, 250);
+   text-decoration: none;
+
+}
+.t-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.t-right>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-weight: 400;
+    list-style: none;
+}
+.t-right>:last-child>img{
+    width: 25px;
+    height: 25px;
+}
+.t-contact>a:hover{
+    transition: all .2s ease ;
+    color: rgb(197, 193, 196);
+}
