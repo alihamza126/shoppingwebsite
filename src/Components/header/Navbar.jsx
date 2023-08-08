@@ -1,16 +1,21 @@
 import { CaretDown, CornersOut, FolderSimpleUser, HouseSimple, NavigationArrow, Package, Phone, ShoppingBag, User, UserFocus} from 'phosphor-react'
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import menuIcon from '../../assets/icons/icons8_Menu_32.png'
 import closeIcon from '../../assets/icons/icons8_Close_32.png'
-import MobileNav from './MobileNav.jsx/MobileNav';
+
 
 const Navbar = () => {
+  const reff=useRef()
+
  const [mobile,setmobile]= useState(false)
   const mobileDevice=(res)=>{
     setmobile(res)
+    reff.current.classList.toggle('mobilenav')
+    // console.log(reff.current.classList.toggle('mobilenav'))
   }
+
   return (
     <div className="navbar">
         <div className="n-left" >
@@ -18,7 +23,7 @@ const Navbar = () => {
           <h1>Catergories <span><CaretDown/></span></h1>
         </div>
         <div className="n-right">
-          <nav className="nav">
+          <nav className="nav"  ref={reff}>
                 <ul>
                   <li>
                     <Link>Homes <span><HouseSimple/></span></Link>
@@ -44,7 +49,7 @@ const Navbar = () => {
           <button className="toggle-icon" onClick={()=>{mobileDevice(!mobile)}}>{
             mobile?<span><img src={closeIcon}/></span>:<span><img src={menuIcon}/></span>
           }</button>
-          {mobile&&<MobileNav/>}
+        
     </div>
   )
 }
