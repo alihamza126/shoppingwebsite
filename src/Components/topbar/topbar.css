@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8vh;
+    height: 6vh;
     color: white !important;
 }
 svg{
@@ -50,4 +50,12 @@ svg{
 .t-contact>a:hover{
     transition: all .2s ease ;
     color: rgb(197, 193, 196);
+}
+
+
+/* ==========media========= */
+@media (max-width:420px) {
+    .t-left{
+        display: none;
+    }
 }

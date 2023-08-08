@@ -2,6 +2,10 @@
   font-family: 'Ubuntu';
   src: url('./assets/font/Ubuntu-Regular.ttf');
 }
+@font-face {
+  font-family: 'gumela';
+  src: url('./assets/font/Gumela.woff');
+}
 *{
   box-sizing: border-box;
   margin: 0;
