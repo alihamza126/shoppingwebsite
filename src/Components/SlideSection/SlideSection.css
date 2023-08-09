@@ -1,0 +1,139 @@
+.home-slide-section {
+    display: flex;
+    height: 440px;
+}
+
+.home-slide-section>:nth-child(1) {
+    flex-basis: 18%;
+}
+
+.home-slide-section>:nth-child(2) {
+    flex-basis: 82%;
+}
+
+.category {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: end;
+    padding-right: 16px;
+}
+
+.c-box {
+    width: 197px;
+    background-color: rgba(210, 183, 241, 0.342);
+    box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.082);
+    border-radius: 11px;
+}
+
+.c-box ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-box ul li {
+    display: flex;
+    gap: 1rem;
+    padding: .5rem 0;
+    margin-top: 2px;
+    padding-left: 12px;
+}
+
+.c-box ul li p {
+    text-transform: capitalize;
+}
+
+.c-box ul li>img {
+    width: 25px;
+    height: 25px;
+}
+
+.c-box ul li:hover {
+    background: var(--themecolor);
+    border-radius: 12px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* ----------------------------------------------Slide----------------------------------------------- */
+
+.h-slider {
+    height: 440px;
+    width: 82%;
+}
+
+.h-slider>img {
+    width: 100%;
+    height: 440px;
+}
+
+.s-slilde {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.s-slilde>img {
+    width: 100%;
+    height: 440px;
+    border-radius: 2px;
+}
+
+.s-slilde>.s-slide-caption {
+    width: 70%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 13%;
+    bottom: 30px;
+    text-align: center;
+}
+
+.s-slilde>.s-slide-caption>h3 {
+    color: var(--themecolor);
+    font-family: 'gumela' !important;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.s-slilde>.s-slide-caption>p {
+    color: rgba(27, 14, 20, 0.808);
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-spacing: .3rem;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: rgb(177, 26, 97);
+}
+
+@media (max-width:440px){
+        .category{
+            display: none;
+        }
+        .h-slider{
+           width:100%;
+        }
+        .s-slilde>.s-slide-caption>h3{
+            font-size: 1.5rem;
+        }
+        .s-slilde>.s-slide-caption>p{
+            font-size: 1rem;
+            word-spacing: 2px;
+            color: rgb(34, 33, 33);
+            font-weight: normal;
+        }
+        .category{
+            display: none;
+            position: absolute;
+            left: 22px;
+            z-index: 101;
+            width: 170px;
+        }
+        .c-box{
+            width: 170px;
+        }
+}

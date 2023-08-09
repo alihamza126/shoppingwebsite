@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-evenly;
     background: #ffffff;
-    height: 5rem;
+ 
 }
 
 /* =========left============= */
@@ -32,7 +32,7 @@
     font-family: 'gumela' !important;
     font-size: 2.2rem;
     font-weight: bolder;
-    color: rgba(221, 73, 98, 0.836);
+    color: #dd4962e3;
 }
 
 /* =======center=========== */
@@ -112,7 +112,7 @@
 }
 
 .s-icon span>img {
-    background: #f77d91;
+    background: var(--themecolor);
     padding: .4rem;
     height: 37px;
     color: rgba(0, 0, 0, 0.507);
@@ -139,7 +139,7 @@
     right: -2px;
 }
 
-@media (max-width:420px) {
+@media (max-width:768px) {
     .searchbar {
         justify-content: space-between;
         padding: 0;
@@ -167,10 +167,10 @@
 /* ===============Navbar======================================================================= */
 
 .navbar {
-    margin-top: 2rem;
+    margin-top: 1.3rem;
     display: flex;
     justify-content: space-between;
-    padding: 0 5rem;
+    padding: 0 2rem;
 }
 
 /* ----------left---- */
@@ -226,7 +226,7 @@
 }
 
 .nav>ul>li:hover {
-    transition: all .3s ease;
+    transition: all .2s ease;
     background-color: #726d6d25;
     border-radius: 7px;
 }
@@ -276,10 +276,10 @@
     padding: 1px;
 }
 
-@media (max-width:420px) {
+@media (max-width:768px) {
     .navbar {
         padding: 0;
-        padding: 0 2rem;
+        padding: 0 .6rem;
     }
 
     .toggle-icon {
@@ -290,10 +290,12 @@
     .nav {
         display: block;
         position: fixed;
+        z-index: 111;
         top: 0;
         left:-240px;
         transition: all .7s ease-out;
         transform-style: preserve-3d;
+        overflow-x: hidden;
         
     }
 

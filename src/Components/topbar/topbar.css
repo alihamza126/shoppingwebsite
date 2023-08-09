@@ -20,6 +20,7 @@ svg{
 }
 .t-contact{
     display: flex;
+    flex-shrink: 2;
     gap: 10px;
 }
 .t-contact>:nth-child(1){
@@ -54,7 +55,7 @@ svg{
 
 
 /* ==========media========= */
-@media (max-width:420px) {
+@media (max-width:768px) {
     .t-left{
         display: none;
     }

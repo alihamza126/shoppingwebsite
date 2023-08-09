@@ -15,3 +15,6 @@
 body{
   font-family: 'Ubuntu'!important;
 }
+:root{
+  --themecolor:#dd4962e3;
+}
