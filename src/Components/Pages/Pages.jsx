@@ -2,10 +2,11 @@ import React from 'react'
 import HomeCategory, { CatProvider } from '../SlideSection/HomeCategory'
 import HomeSlide from '../SlideSection/HomeSlide'
 import '../SlideSection/SlideSection.css';
-import { caterogyIcons } from '../../Products-Data/Category';
 import Flashsale from '../flashsale/Flashsale';
 import Topbar from '../topbar/Topbar';
 import Head from '../header/Head';
+import Newarrival from '../newarrival/Newarrival';
+import Featuremenu from '../featureMenus/Featuremenu';
 
 
 
@@ -23,6 +24,8 @@ const Pages = () => {
         </div>
       </CatProvider>
       <Flashsale />
+      {/* <Newarrival/> */}
+      <Featuremenu/>
     </>
   )
 }

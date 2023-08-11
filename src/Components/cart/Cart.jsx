@@ -7,7 +7,6 @@ import Cartitem from './cartitem'
 import { cartContext } from '../Context/CartContext'
 import { Allproducts } from '../../Products-Data/Products'
 import { totalProducts } from '../../Products-Data/CartArry'
-import { CloudFog } from 'phosphor-react'
 
 const Cart = () => {
     const { addtoCart, removetoCart, cart, totallcarts, totallCartPrice } = useContext(cartContext)

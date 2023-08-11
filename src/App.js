@@ -13,9 +13,9 @@ const App = () => {
 
     <>
       <CartContextProvider>
-
+      
         <Routes>
-          <Route path='/' element={<Pages />} />
+          <Route path='/' index element={<Pages />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
 
