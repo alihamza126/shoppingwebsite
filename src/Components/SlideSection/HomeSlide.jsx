@@ -24,7 +24,7 @@ const HomeSlide = () => {
       >
         {sliderImg.map((ele, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <div className="s-slilde">
                 <img src={ele.img} />
                 <div className="s-slide-caption">

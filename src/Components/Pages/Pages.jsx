@@ -1,21 +1,30 @@
 import React from 'react'
-import HomeCategory from '../SlideSection/HomeCategory'
+import HomeCategory, { CatProvider } from '../SlideSection/HomeCategory'
 import HomeSlide from '../SlideSection/HomeSlide'
 import '../SlideSection/SlideSection.css';
 import { caterogyIcons } from '../../Products-Data/Category';
-import { CatProvider } from '../Context/categoryContext';
+import Flashsale from '../flashsale/Flashsale';
+import Topbar from '../topbar/Topbar';
+import Head from '../header/Head';
+
+
 
 const Pages = () => {
-    return (
-        <>
-           <CatProvider>
-           <div className="home-slide-section">
-                <HomeCategory />
-                <HomeSlide />
-            </div>
-           </CatProvider>
-        </>
-    )
+  return (
+    <>
+      <div className="wrapper">
+        <Topbar />
+        <Head />
+      </div>
+      <CatProvider>
+        <div className="home-slide-section">
+          <HomeCategory />
+          <HomeSlide />
+        </div>
+      </CatProvider>
+      <Flashsale />
+    </>
+  )
 }
 
 export default Pages

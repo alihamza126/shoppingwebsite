@@ -1,9 +1,11 @@
 import { ChartBar, FileSearch, ShoppingCartSimple, User } from 'phosphor-react';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import { cartContext } from '../Context/CartContext';
 
 
 const Searchbar = () => {
+    const {totallcarts}=useContext(cartContext);
   return (
    <div className="searchbar">
             <div className="s-left">
@@ -26,7 +28,7 @@ const Searchbar = () => {
                 <div className="s-icon">
                   <Link to='/user'><span> <img src={require('../../assets/icons/icons8_user.ico')} alt="" /></span></Link>
                    <Link to='/cart'><span className='cart-absolute'>
-                   <span>5</span>
+                   <span>{totallcarts}</span>
                    <img src={require('../../assets/icons/icons8_shopping_cart.ico')} alt="" /></span></Link>
                 </div>
             </div>

@@ -7,12 +7,11 @@ import { CatProvider } from '../Context/categoryContext'
 const Head = () => {
     return (
         <>
-           <CatProvider>
            <div className="headdbox p-sticky">
                 <Searchbar />
                 <Navbar />
             </div>
-           </CatProvider>
+        
         </>
     )
 }

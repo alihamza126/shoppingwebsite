@@ -1,9 +1,13 @@
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu',sans-serif;
   src: url('./assets/font/Ubuntu-Regular.ttf');
 }
 @font-face {
-  font-family: 'gumela';
+  font-family: 'bold';
+  src: url('./assets/font/Ubuntu-Bold.ttf');
+}
+@font-face {
+  font-family: 'gumela',sans-serif;
   src: url('./assets/font/Gumela.woff');
 }
 *{
@@ -15,6 +19,37 @@
 body{
   font-family: 'Ubuntu'!important;
 }
+h3{
+  font-family: 'bold'!important;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.897)!important;
+}
 :root{
   --themecolor:#dd4962e3;
+}
+
+
+
+.blur{
+  filter: contrast(.7) !important;
+}
+.bright:hover{
+  transition: all .1 ease;
+    filter: contrast(2) !important;
+    filter: saturate(2) !important;
+    cursor: pointer;
+}
+
+.overflow{
+  overflow: hidden !important;
+}
+.scale:hover{
+  transition:all .5s ease-in-out;
+  scale: 1.015;
+}
+.btnrotate:hover img{
+    transition: all .4s ease-in-out;
+    transform: rotate(180deg);
+    transform: skew(1);
 }

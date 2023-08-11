@@ -4,18 +4,29 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import menuIcon from '../../assets/icons/icons8_Menu_32.png'
 import closeIcon from '../../assets/icons/icons8_Close_32.png'
-import { catContext } from '../Context/categoryContext';
+import { cref } from '../SlideSection/HomeCategory';
+import { useEffect } from 'react';
+import { createRef } from 'react';
+
+
+
 
 
 const Navbar = () => {
-  const reff = useRef()
-  const [mobile, setmobile] = useState(false)
-  // -----Category context------
-  const mCategory = useContext(catContext);
-  const handleCategory = () => {
-    mCategory.dispatch({type:'catmobile'});
-  }
+  
+    const togref=createRef()
 
+  const reff = useRef(cref)
+  useEffect(() => {
+    reff.current.current.classList.toggle('c-box-visible')
+  })
+  const [mobile, setmobile] = useState(false)
+  const [catmobile, catsetmobile] = useState(false)
+  // -----Category Reff Handel ------
+  const handleCategory = () => {
+    catsetmobile(!catmobile);
+    console.log(catmobile)
+  }
   //   -------------------
 
 
@@ -24,17 +35,18 @@ const Navbar = () => {
 
   const mobileDevice = (res) => {
     setmobile(res)
-    reff.current.classList.toggle('mobilenav')
+    togref.current.classList.toggle('mobilenav')
   }
 
   return (
     <div className="navbar">
-      <div className="n-left" >
+      {/* <CatProvider props={cmobile}/> */}
+      <div className="n-left" onClick={handleCategory}>
         <span><img src={require('../../assets/icons/caterory_32.png')} alt="" /></span>
-        <h1 onClick={handleCategory}>Catergories <span><CaretDown /></span></h1>
+        <h1 >Catergories <span><CaretDown /></span></h1>
       </div>
       <div className="n-right">
-        <nav className="nav" ref={reff}>
+        <nav className="nav" ref={togref}>
           <ul>
             <li>
               <Link>Homes <span><HouseSimple /></span></Link>
@@ -60,8 +72,12 @@ const Navbar = () => {
       <button className="toggle-icon" onClick={() => { mobileDevice(!mobile) }}>{
         mobile ? <span><img src={closeIcon} /></span> : <span><img src={menuIcon} /></span>
       }</button>
+
     </div>
   )
 }
+
+
+
 
 export default Navbar
