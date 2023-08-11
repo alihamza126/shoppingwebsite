@@ -13,9 +13,8 @@ const HomeSlide = () => {
   return (
     <div className='h-slider'>
       <Swiper
-        modules={[Pagination,A11y,Mousewheel,Autoplay,EffectCoverflow,Navigation]}
+        modules={[Pagination,A11y,Autoplay,EffectCoverflow,Navigation]}
         spaceBetween={0}
-        mousewheel
         autoplay
         navigation={{navigation:true}}
         slidesPerView={1}

@@ -13,30 +13,33 @@ import { createRef } from 'react';
 
 
 const Navbar = () => {
-  
-    const togref=createRef()
+
+  const togref = createRef()
 
   const reff = useRef(cref)
-  useEffect(() => {
-    reff.current.current.classList.toggle('c-box-visible')
-  })
   const [mobile, setmobile] = useState(false)
-  const [catmobile, catsetmobile] = useState(false)
+  const [catmobile, catsetmobile] = useState(true)
   // -----Category Reff Handel ------
   const handleCategory = () => {
     catsetmobile(!catmobile);
-    console.log(catmobile)
+    
   }
+  const mobileDevice = (res) => {
+    setmobile(res)
+    togref.current.classList.toggle('mobilenav');
+    reff.current.current.classList.toggle('c-box-visible');
+  }
+  useEffect(() => {
+    reff.current.current.classList.toggle('c-box-visible');
+    
+  },[handleCategory])
   //   -------------------
 
 
 
 
 
-  const mobileDevice = (res) => {
-    setmobile(res)
-    togref.current.classList.toggle('mobilenav')
-  }
+
 
   return (
     <div className="navbar">
@@ -69,7 +72,7 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
-      <button className="toggle-icon" onClick={() => { mobileDevice(!mobile) }}>{
+      <button  className="toggle-icon" onClick={() => { mobileDevice(!mobile) }}>{
         mobile ? <span><img src={closeIcon} /></span> : <span><img src={menuIcon} /></span>
       }</button>
 

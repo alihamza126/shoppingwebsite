@@ -15,7 +15,6 @@
 .category {
     position:absolute;
     left: -200px;
-    display: none;
     width: 100%;
     background: #ffffff;
     display: flex;
@@ -30,6 +29,7 @@
     background-color: rgba(210, 183, 241, 0.226);
     box-shadow: 4px -6px 6px 2px rgba(110, 110, 110, 0.137);
     border-radius: 11px;
+    transition: all 2s ease;
 }
 
 .c-box ul {
@@ -63,7 +63,7 @@
 .c-box-visible{
     display: block !important;
     position: static;
-    left: 200px !important;
+    left: 0px !important;
     transition: all 2s ease;
 
 }
@@ -144,12 +144,18 @@
         }
         .category{
             display: none;
-            position: absolute;
-            left: 22px;
-            z-index: 101;
-            width: 170px;
+            position:absolute;
+            z-index: 2;
+            width: 150px !important;
+            background: transparent;
         }
         .c-box{
-            width: 170px;
+            width: 150px !important;
+            padding: 5px 0px;
+            background: #cfc1c1;
         }
+        .c-box>ul{
+            width:100%;
+        }
+        
 }
