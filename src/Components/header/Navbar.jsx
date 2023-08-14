@@ -18,20 +18,18 @@ const Navbar = () => {
 
   const reff = useRef(cref)
   const [mobile, setmobile] = useState(false)
-  const [catmobile, catsetmobile] = useState(true)
+  const [catmobile, catsetmobile] = useState(false)
   // -----Category Reff Handel ------
-  const handleCategory = () => {
-    catsetmobile(!catmobile);
-    
+  const handleCategory = (cres) => {
+    catsetmobile(cres);
+    reff.current.current.classList.toggle('c-box-visible');
   }
   const mobileDevice = (res) => {
     setmobile(res)
     togref.current.classList.toggle('mobilenav');
-    reff.current.current.classList.toggle('c-box-visible');
   }
   useEffect(() => {
-    reff.current.current.classList.toggle('c-box-visible');
-    
+    reff.current.current.classList.toggle('c-box-invisible');
   },[handleCategory])
   //   -------------------
 
@@ -44,7 +42,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       {/* <CatProvider props={cmobile}/> */}
-      <div className="n-left" onClick={handleCategory}>
+      <div className="n-left" onClick={()=>handleCategory(!catmobile)}>
         <span><img src={require('../../assets/icons/caterory_32.png')} alt="" /></span>
         <h1 >Catergories <span><CaretDown /></span></h1>
       </div>

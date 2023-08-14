@@ -35,7 +35,7 @@ h3{
   filter: contrast(.7) !important;
 }
 .bright:hover{
-  transition: all .1 ease;
+  transition: all .15 ease;
     filter: contrast(2) !important;
     filter: saturate(2) !important;
     cursor: pointer;

@@ -1,0 +1,64 @@
+.t-catagory{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding:2rem 4rem ;
+    background-color: rgba(250, 232, 210, 0.795);
+}
+.tc-container{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+
+/* ========================= */
+.tc-item{
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+    width:22rem;
+    height: 8rem;
+    padding: 5px;
+    position: relative;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow:4px 4px 6px 5px rgba(0, 0, 0, 0.062);
+}
+.tc-name,
+.tc-sale{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 4px;
+    width: auto;
+    background-color: rgb(120, 58, 136);
+    color: aliceblue;
+    border-radius: 33px;
+    font-size: 12px;
+    z-index: 111;
+}
+.tc-name{
+    top: 6px;
+    left: 9px;
+}
+.tc-sale{
+    top: 6px;
+    right: 9px;
+}
+.tc-img{
+    width:33%;
+
+}
+.tc-img>img{
+    width:100%;
+    height: 100%;
+    border-radius: 3px;
+}

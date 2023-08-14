@@ -7,6 +7,7 @@ import Topbar from '../topbar/Topbar';
 import Head from '../header/Head';
 import Newarrival from '../newarrival/Newarrival';
 import Featuremenu from '../featureMenus/Featuremenu';
+import Topcatagory from '../topcatagory/Topcatagory';
 
 
 
@@ -26,6 +27,7 @@ const Pages = () => {
       <Flashsale />
       {/* <Newarrival/> */}
       <Featuremenu/>
+      <Topcatagory/>
     </>
   )
 }
