@@ -1,17 +1,21 @@
 .feature-menu{
     width: 100%;
     min-height: 10rem;
+   display: flex;
     padding: 1rem 3rem;
     background-color: rgba(250, 232, 210, 0.795);
+    box-shadow: 10 0px 10px 12px rgba(250, 232, 210, 0.795);
+    z-index: 111111;
 }
 .f-container{
     width: 100%;
+    margin-left: 2rem;
     display: flex;
     justify-content: center;
 }
 .f-banner-1{
     height: 8rem;
-    width: 98%;
+    width: 100%;
     border-radius: 15px;
     border-bottom-left-radius: 50px;
     display: flex;

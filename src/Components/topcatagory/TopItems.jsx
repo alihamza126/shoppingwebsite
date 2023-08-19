@@ -8,13 +8,13 @@ const TopItems = (props) => {
             <span className='tc-name blur bright'>{name}asd</span>
             <span className='tc-sale blur bright'>{sale}</span>
             <div className="tc-img overflow scale">
-                <img src={img1} />
+                <img src={img1} alt=' '/>
             </div>
             <div className="tc-img overflow scale">
-                <img src={img2} />
+                <img src={img2}  alt=' '/>
             </div>
             <div className="tc-img overflow scale">
-                <img src={img3} />
+                <img src={img3}  alt=' '/>
             </div>
         </div>
     )

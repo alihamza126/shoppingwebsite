@@ -62,3 +62,12 @@
     height: 100%;
     border-radius: 3px;
 }
+.tc-heading{
+    background-color:rgba(250, 232, 210, 0.795);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 7rem;
+    text-transform: capitalize;
+}
