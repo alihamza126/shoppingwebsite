@@ -1,19 +1,18 @@
 import React, { useContext } from 'react'
 import './cart.css'
-import Head from '../header/Head'
 import Searchbar from '../header/Searchbar'
 import Topbar from '../topbar/Topbar'
 import Cartitem from './cartitem'
 import { cartContext } from '../Context/CartContext'
-import { Allproducts } from '../../Products-Data/Products'
 import { totalProducts } from '../../Products-Data/CartArry'
+
 
 const Cart = () => {
     const { addtoCart, removetoCart, cart, totallcarts, totallCartPrice } = useContext(cartContext)
     return (
         <>
-            <div>
-                <Topbar />
+            <Topbar />
+            <div className="sticky-comp">
                 <Searchbar />
             </div>
 

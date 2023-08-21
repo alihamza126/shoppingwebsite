@@ -4,20 +4,21 @@ import HomeSlide from '../SlideSection/HomeSlide'
 import '../SlideSection/SlideSection.css';
 import Flashsale from '../flashsale/Flashsale';
 import Topbar from '../topbar/Topbar';
-import Head from '../header/Head';
-import Newarrival from '../newarrival/Newarrival';
 import Featuremenu from '../featureMenus/Featuremenu';
 import Topcatagory from '../topcatagory/Topcatagory';
-
+import Searchbar from '../header/Searchbar';
+import Navbar from '../header/Navbar';
+import '../header/head.css'
 
 
 const Pages = () => {
   return (
     <>
-      <div className="wrapper">
-        <Topbar />
-        <Head />
+      <Topbar/>
+      <div className="sticky-comp">
+        <Searchbar/>
       </div>
+      <Navbar/>
       <CatProvider>
         <div className="home-slide-section">
           <HomeCategory />
