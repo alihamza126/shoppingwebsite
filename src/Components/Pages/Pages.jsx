@@ -9,6 +9,7 @@ import Topcatagory from '../topcatagory/Topcatagory';
 import Searchbar from '../header/Searchbar';
 import Navbar from '../header/Navbar';
 import '../header/head.css'
+import Newarrival from '../newarrival/Newarrival';
 
 
 const Pages = () => {
@@ -26,9 +27,9 @@ const Pages = () => {
         </div>
       </CatProvider>
       <Flashsale />
-      {/* <Newarrival/> */}
       <Featuremenu/>
       <Topcatagory/>
+      <Newarrival/>
     </>
   )
 }

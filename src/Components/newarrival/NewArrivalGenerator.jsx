@@ -2,7 +2,9 @@ import React from 'react'
 
 const NewArrivalGenerator = () => {
   return (
-    <div>NewArrivalGenerator</div>
+    <div className="arrival-item">
+        
+    </div>
   )
 }
 

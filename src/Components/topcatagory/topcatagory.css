@@ -71,3 +71,8 @@
     padding-left: 7rem;
     text-transform: capitalize;
 }
+@media only screen and (max-width:570px){
+    .t-catagory{
+        padding: .4rem 0;
+    }
+}
